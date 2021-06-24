@@ -1,0 +1,16 @@
+#!/bin/bash
+
+focus=$(herbstclient attr clients.focus.title)
+if echo "$focus" | grep VIM >> /dev/null
+then
+    name=$(echo $focus | awk -F' ' '{print $1}')
+    path=$(echo $focus | awk -F'(' '{print $2}' | awk -F')' '{print $1}')
+    echo "vim: $path/$name"
+elif echo "$focus" | grep "Visual Studio Code" >> /dev/null
+then
+    name=$(echo $focus | awk -F' ' '{print $1}')
+    folder=$(echo $focus | awk -F' ' '{print $3}')
+    echo "code: $folder/$name"
+else
+    echo "---"
+fi

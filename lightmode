@@ -1,0 +1,7 @@
+#!/bin/bash
+
+xrandr-invert-colors
+
+redshift-gtk & > /dev/null
+
+exit 0

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "0" > /home/daniel/.cache/qutebrowser/sessiontracker
+printf "qutebrowser sessions wiped!\n"
+exit 0

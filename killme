@@ -1,0 +1,21 @@
+#!/bin/bash
+
+bash /home/daniel/scripts/qutecleaner >> /dev/tty
+printf "\nI die with honor!\n"
+printf "\n                   I die with honor!\n"
+printf "\n                                      I die with honor!\n"
+printf "\n                                                          I die with honor!\n"
+printf "\n                                                                             I die with honor!\n"
+printf "\n                                                                                                I die with honor!\n"
+printf "\n                                                                                                                   I die with honor!\n"
+sleep 1
+printf "\n                                                                                                I die with honor!\n"
+printf "\n                                                                             I die with honor!\n"
+printf "\n                                                          I die with honor!\n"
+printf "\n                                      I die with honor!\n"
+printf "\n                   I die with honor!\n"
+printf "\nI die with honor!\n"
+
+rm -rf /home/daniel/.cache/yay
+shutdown now
+

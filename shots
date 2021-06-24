@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function SNIPPETS {
+    import ~/shots/snippets/$(date +%F-%H-%M-%S).png
+}
+
+function SCREEN {
+    import -window root ~/shots/$(date +%F-%H-%M-%S).png
+}
+
+for arg in $@; do
+    if test $arg = snippet
+    then
+        SNIPPETS
+    elif test $arg = screen
+    then
+        SCREEN
+    fi
+done
+
+exit 0

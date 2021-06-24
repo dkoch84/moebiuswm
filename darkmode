@@ -1,0 +1,11 @@
+#!/bin/bash
+
+printf "\n        waiting for redshift to die...\n\n"
+
+ps -ef | grep 'redshift' | grep -v grep | awk '{print $2}' | xargs kill -15
+
+sleep 2
+
+xrandr-invert-colors
+
+exit 0

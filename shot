@@ -1,0 +1,5 @@
+#!/bin/bash
+stamp=$(date +'%F-%H%M%S')
+filename=$(echo $stamp.png)
+import -window root ~/shots/$filename
+exit 0
