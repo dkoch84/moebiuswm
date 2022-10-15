@@ -1,0 +1,16 @@
+#!/bin/bash
+
+output=$(acpi | head -n 1 | cut -d' ' -f 5 | cut -d: -f 1,2)
+prestate=$(acpi | head -n 1 |awk '{print $3}' | awk -F, '{print $1}')
+percent=$(acpi | head -n 1 |awk '{print $4}' | awk -F, '{print $1}')
+
+state=$(echo $prestate | awk '{print tolower($0)}')
+    
+if test $state != "discharging";
+then
+		echo "ac"
+else
+        echo "$percent"
+fi
+
+exit 0

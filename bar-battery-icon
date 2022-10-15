@@ -1,0 +1,23 @@
+#!/bin/bash
+
+state=$(acpi | head -n 1 | cut -d' ' -f 4 | awk -F, '{print $1}' | awk -F% '{print $1}')
+
+if test $state -ge 85
+then
+    icon=$(echo -e '\uf240')
+elif test $state -ge 65
+then
+    icon=$(echo -e '\uf241')
+elif test $state -ge 40
+then
+    icon=$(echo -e '\uf242')
+elif test $state -ge 10
+then
+    icon=$(echo -e '\uf243')
+else
+    icon=$(echo -e '\uf244')
+fi
+
+echo $icon
+
+exit 0
